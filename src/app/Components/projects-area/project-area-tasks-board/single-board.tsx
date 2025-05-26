@@ -2,7 +2,7 @@ import { useTheme } from "next-themes";
 import SingleTask from "./single-task";
 
 export type Board = {
-  name: String;
+  name: string;
   createdAt: Date;
   tasks: string[];
 };
