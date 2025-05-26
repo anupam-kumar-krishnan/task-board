@@ -14,7 +14,7 @@ export default function SingleBoard({ board }: { board: Board }) {
 
   const numberTasks = tasks.length;
 
-  const bgColor = theme === "dark" ? "bg-dark" : "bg-gray-100";
+  const bgColor = theme === "dark" ? "bg-black" : "bg-gray-100";
 
   return (
     <div className="w-full h-full border p-4 rounded-2xl">
