@@ -17,7 +17,7 @@ export function SingleProjectCommandItem({
     <CommandItem
       value={projectName}
       onSelect={(value: string) => {
-        const findProject = projects.find((proj) => project.name === value);
+        const findProject = projects.find((proj) => proj.name === value);
 
         if (findProject) {
           onSelectedItem(findProject);

@@ -1,5 +1,5 @@
 import { CircularProgressbar } from "react-circular-progressbar";
-//import "react-circular-progressbar/dist.style.css";
+import "react-circular-progressbar/dist/styles.css";
 
 export default function CircularProgress() {
   const percentage = 66;
