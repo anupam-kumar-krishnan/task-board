@@ -1,4 +1,5 @@
 import { Separator } from "@/components/ui/separator";
+import { useTheme } from "next-themes";
 
 type TaskCard = {
   label: string;
@@ -26,13 +27,17 @@ export default function TaskStats() {
 }
 
 function SingleCard({ statCard }: { statCard: TaskCard }) {
+  const { theme } = useTheme();
+
+  const bgColor = theme === "dark" ? "bg-black/70" : "bg-gray-200";
+
   return (
-    <div className="p-3 bg-gray-100 rounded-xl">
+    <div className={`${bgColor} p-3 rounded-xl`}>
       <span className="text-gray-600 text-[12px]">
         {statCard.label.toUpperCase()}
       </span>
       <div className="flex gap-2 mt-1 items-center">
-        <Separator className="w-1 h-4 bg-primary" orientation={"vertical"} />
+        <Separator className="w-2 h-4 bg-primary" orientation={"vertical"} />
         <span className="font-bold text-lg">{statCard.value}</span>
       </div>
     </div>

@@ -6,11 +6,16 @@ import { Separator } from "@/components/ui/separator";
 import SearchBar from "./search-bar";
 import { ModeToggle } from "@/app/mode-toggle";
 import AppNameAndLogo from "./logo-app";
+import { useTheme } from "next-themes";
 
 export default function Navbar() {
+  const { theme } = useTheme();
+
+  const bgColor = theme === "dark" ? "bg-black" : "bg-gray-200";
+
   return (
-    <div className="poppins p-6 flex justify-between items-center">
-      <div className="flex items-center gap-16">
+    <div className={`${bgColor} poppins p-6 flex justify-between items-center`}>
+      <div className={`${bgColor} flex items-center gap-16`}>
         <AppNameAndLogo />
         <SearchBar />
       </div>
